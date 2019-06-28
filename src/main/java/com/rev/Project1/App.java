@@ -14,9 +14,14 @@ public class App
     	String testUser = "ryho";
 		String testPass = "pass";
 		
+		
+		
 		try {
 			Employee e = EmployeeService.getService().login(testUser, testPass).get();
+			Reimbursement testR = new Reimbursement(3, 300.00, true, e.getEmployeeId());
 			
+			System.out.println("\n================================");
+			System.out.println("Employee tests");
 			System.out.println(e.getFirstName());
 			System.out.println(e.getLastName());
 			System.out.println(e.getEmployeeId());
@@ -35,7 +40,8 @@ public class App
 				System.out.println(r);
 			}
 			
-			
+			boolean testSubmit = EmployeeService.getService().submitReimbursement(testR);
+			System.out.println("Submit reimbursement: " + testSubmit);
 			
 		}
 		catch(NoSuchElementException e) {

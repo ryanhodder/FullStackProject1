@@ -36,4 +36,8 @@ public class EmployeeService {
 	public Optional<List<Reimbursement>> viewPast(Employee e){
 		return eDao.viewPast(e);
 	}
+	
+	public boolean submitReimbursement(Reimbursement r) {
+		return eDao.submitReimbursement(r);
+	}
 }

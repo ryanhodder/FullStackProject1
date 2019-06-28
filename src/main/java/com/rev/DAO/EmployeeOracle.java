@@ -3,6 +3,7 @@ package com.rev.DAO;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
@@ -143,7 +144,7 @@ public class EmployeeOracle implements EmployeeDAO{
 	}
 	
 	public Optional<List<Reimbursement>> viewPast(Employee e) {
-Connection c = ConnectionUtil.getConnection();
+		Connection c = ConnectionUtil.getConnection();
 		
 		//no connection
 		if(c == null) {
@@ -184,7 +185,36 @@ Connection c = ConnectionUtil.getConnection();
 	}
 	
 	public boolean submitReimbursement(Reimbursement r) {
-		// TODO Auto-generated method stub
+		Connection c = ConnectionUtil.getConnection();
+		
+		//no connection
+		if(c == null) {
+			return false;
+		}
+		
+		try {
+			String sql = "INSERT INTO REIMBURSEMENT VALUES(?,?,?,?)";
+			PreparedStatement ps = c.prepareStatement(sql);
+			ps.setInt(1, r.getReimbursementId());
+			ps.setDouble(2, r.getAmount());
+			ps.setInt(3, 1); //using one to represent that it is pending
+			ps.setInt(4, r.getEmployeeId());
+			int result = ps.executeUpdate();
+			
+			if(result == 0 || result == 1) {
+				return true;
+			}
+			
+			return false;
+			
+		}
+		catch(SQLException se) {
+			System.out.println("Error submitting reimbursement");
+		}
+		catch(Exception e) {
+			System.out.println("Different error submitting reimbursement");
+		}
+		
 		return false;
 	}
 	
