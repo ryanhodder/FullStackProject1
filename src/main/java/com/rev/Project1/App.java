@@ -10,15 +10,19 @@ import com.rev.Services.EmployeeService;
 
 public class App 
 {
-    public static void main( String[] args ) {
+	
+	public static void main(String[] args) {
+		//App.run();
+	}
+	
+	
+    public static void run() {
     	String testUser = "ryho";
 		String testPass = "pass";
 		
-		
-		
 		try {
 			Employee e = EmployeeService.getService().login(testUser, testPass).get();
-			Reimbursement testR = new Reimbursement(3, 300.00, true, e.getEmployeeId());
+			Reimbursement testR = new Reimbursement(5, 300.00, true, e.getEmployeeId());
 			
 			System.out.println("\n================================");
 			System.out.println("Employee tests");
@@ -49,6 +53,7 @@ public class App
 		}
 		catch(Exception e) {
 			System.out.println("Error in main");
+			System.out.println(e.getStackTrace());
 		}
     }
 }

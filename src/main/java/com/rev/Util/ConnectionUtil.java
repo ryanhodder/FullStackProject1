@@ -27,28 +27,29 @@ public class ConnectionUtil {
 		InputStream i = null;
 		
 		try {
-			Properties p = new Properties();
-			i = new FileInputStream("src/main/resources/connection.properties");
-			p.load(i);
+//			Properties p = new Properties();
+//			i = new FileInputStream("src/main/resources/connection.properties");
+//			p.load(i);
 			
 			//
 			Class.forName("oracle.jdbc.driver.OracleDriver");
 			
-			String end = p.getProperty("jdbc.url");
-			String username = p.getProperty("jdbc.username");
-			String password = p.getProperty("jdbc.password");
+			String end = "jdbc:oracle:thin:@database-1.cvexkmphr6nw.us-east-1.rds.amazonaws.com:1521:ORCL";
+			String username = "root";
+			String password = "7t9??jsmtmrsX";
+			
+//			String end = p.getProperty("jdbc.url");
+//			String username = p.getProperty("jdbc.username");
+//			String password = p.getProperty("jdbc.password");
 			
 			c = DriverManager.getConnection(end, username, password);
 			return c;
 			
-		}catch(FileNotFoundException e){
-			System.out.println("Error reading file internallyFile\nPlease try again");
-//			l.catching(e);
+//		}catch(FileNotFoundException e){
+//			System.out.println("Error reading file internallyFile\nPlease try again");
+////			l.catching(e);
 		}catch(ClassNotFoundException e) {
 			System.out.println("Error reading file internallyClass\nPlease try again");
-//			l.catching(e);
-		}catch(IOException e) {
-			System.out.println("Error reading file internallyIO\nPlease try again");
 //			l.catching(e);
 		}catch(SQLException e) {
 			System.out.println("Error reading file internallySQL\nPlease try again");
@@ -56,14 +57,15 @@ public class ConnectionUtil {
 //			l.catching(e);
 		}
 		finally {
-			try {
-				i.close();
-			}catch(IOException e) {
-//				l.error("Error with file" + e.getMessage());
-			}
+//			try {
+//				i.close();
+//			}catch(IOException e) {
+////				l.error("Error with file" + e.getMessage());
+//				System.out.println(e.getMessage());
+//			}
 		}
 		
-		return null;
+		return c;
 	}
 }
 
