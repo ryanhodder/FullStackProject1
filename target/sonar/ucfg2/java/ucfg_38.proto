@@ -1,0 +1,88 @@
+
+3com.rev.Models.Manager#toString()Ljava/lang/String;h
+^C:\Users\i_rya\Documents\Revature\FullStack\Project1\src\main\java\com\rev\Models\Manager.javaG G("1*
+1h
+^C:\Users\i_rya\Documents\Revature\FullStack\Project1\src\main\java\com\rev\Models\Manager.javaH	 H(°
+­
+h
+^C:\Users\i_rya\Documents\Revature\FullStack\Project1\src\main\java\com\rev\Models\Manager.javaH	 H(*
+%0java.lang.String"__concat*
+Manager [managerId=*
+""»
+¸
+h
+^C:\Users\i_rya\Documents\Revature\FullStack\Project1\src\main\java\com\rev\Models\Manager.javaH	 H(;
+%1java.lang.String"__concat*
+
+%0java.lang.String*
+, firstName=¶
+³
+h
+^C:\Users\i_rya\Documents\Revature\FullStack\Project1\src\main\java\com\rev\Models\Manager.javaH> H(G
+%2java.lang.String"__id*)*'
+com.rev.Models.Manager"
+	firstNameÃ
+À
+h
+^C:\Users\i_rya\Documents\Revature\FullStack\Project1\src\main\java\com\rev\Models\Manager.javaH	 H(G
+%3java.lang.String"__concat*
+
+%1java.lang.String*
+
+%2java.lang.Stringº
+·
+h
+^C:\Users\i_rya\Documents\Revature\FullStack\Project1\src\main\java\com\rev\Models\Manager.javaH	 H(W
+%4java.lang.String"__concat*
+
+%3java.lang.String*
+, lastName=µ
+²
+h
+^C:\Users\i_rya\Documents\Revature\FullStack\Project1\src\main\java\com\rev\Models\Manager.javaHZ H(b
+%5java.lang.String"__id*(*&
+com.rev.Models.Manager"
+
+lastNameÃ
+À
+h
+^C:\Users\i_rya\Documents\Revature\FullStack\Project1\src\main\java\com\rev\Models\Manager.javaH	 H(b
+%6java.lang.String"__concat*
+
+%4java.lang.String*
+
+%5java.lang.Stringº
+·
+h
+^C:\Users\i_rya\Documents\Revature\FullStack\Project1\src\main\java\com\rev\Models\Manager.javaH	 H(r
+%7java.lang.String"__concat*
+
+%6java.lang.String*
+, userName=µ
+²
+h
+^C:\Users\i_rya\Documents\Revature\FullStack\Project1\src\main\java\com\rev\Models\Manager.javaI I(
+%8java.lang.String"__id*(*&
+com.rev.Models.Manager"
+
+userNameÃ
+À
+h
+^C:\Users\i_rya\Documents\Revature\FullStack\Project1\src\main\java\com\rev\Models\Manager.javaH	 I(
+%9java.lang.String"__concat*
+
+%7java.lang.String*
+
+%8java.lang.String±
+®
+h
+^C:\Users\i_rya\Documents\Revature\FullStack\Project1\src\main\java\com\rev\Models\Manager.javaH	 I(
+%10java.lang.String"__concat*
+
+%9java.lang.String*
+]"…
+h
+^C:\Users\i_rya\Documents\Revature\FullStack\Project1\src\main\java\com\rev\Models\Manager.javaH I(
+
+%10java.lang.StringB
+com.rev.Models.Manager

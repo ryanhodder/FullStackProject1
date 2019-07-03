@@ -1,0 +1,138 @@
+
+"com.rev.Models.Manager#hashCode()Ih
+^C:\Users\i_rya\Documents\Revature\FullStack\Project1\src\main\java\com\rev\Models\Manager.javaM M("10*ü
+2h
+^C:\Users\i_rya\Documents\Revature\FullStack\Project1\src\main\java\com\rev\Models\Manager.javaS6 S(>¶
+³
+h
+^C:\Users\i_rya\Documents\Revature\FullStack\Project1\src\main\java\com\rev\Models\Manager.javaS6 S(>
+%14java.lang.String"__id*(*&
+com.rev.Models.Manager"
+
+userName¾»
+h
+^C:\Users\i_rya\Documents\Revature\FullStack\Project1\src\main\java\com\rev\Models\Manager.javaS6 S(I
+
+%13int"java.lang.String#hashCode()I*
+
+%14java.lang.String2
+hashCode()
+Š
+h
+^C:\Users\i_rya\Documents\Revature\FullStack\Project1\src\main\java\com\rev\Models\Manager.javaS6 S(I
+
+%11int"__id*
+
+
+%13int*
+1*‚
+3h
+^C:\Users\i_rya\Documents\Revature\FullStack\Project1\src\main\java\com\rev\Models\Manager.javaS2 S(3
+Š
+h
+^C:\Users\i_rya\Documents\Revature\FullStack\Project1\src\main\java\com\rev\Models\Manager.javaS2 S(3
+
+%11int"__id*
+
+
+%12int*
+1*®
+4h
+^C:\Users\i_rya\Documents\Revature\FullStack\Project1\src\main\java\com\rev\Models\Manager.javaQ Q(J¶
+³
+h
+^C:\Users\i_rya\Documents\Revature\FullStack\Project1\src\main\java\com\rev\Models\Manager.javaS S(&
+%10java.lang.String"__id*(*&
+com.rev.Models.Manager"
+
+userName*
+2
+3*÷
+5h
+^C:\Users\i_rya\Documents\Revature\FullStack\Project1\src\main\java\com\rev\Models\Manager.javaQ6 Q(>µ
+²
+h
+^C:\Users\i_rya\Documents\Revature\FullStack\Project1\src\main\java\com\rev\Models\Manager.javaQ6 Q(>
+%9java.lang.String"__id*(*&
+com.rev.Models.Manager"
+
+lastName¼¹
+h
+^C:\Users\i_rya\Documents\Revature\FullStack\Project1\src\main\java\com\rev\Models\Manager.javaQ6 Q(I	
+%8int"java.lang.String#hashCode()I*
+
+%9java.lang.String2
+hashCode()‹
+ˆ
+h
+^C:\Users\i_rya\Documents\Revature\FullStack\Project1\src\main\java\com\rev\Models\Manager.javaQ6 Q(I	
+%6int"__id*
+	
+%8int*
+4*€
+6h
+^C:\Users\i_rya\Documents\Revature\FullStack\Project1\src\main\java\com\rev\Models\Manager.javaQ2 Q(3‹
+ˆ
+h
+^C:\Users\i_rya\Documents\Revature\FullStack\Project1\src\main\java\com\rev\Models\Manager.javaQ2 Q(3	
+%6int"__id*
+	
+%7int*
+4*­
+7h
+^C:\Users\i_rya\Documents\Revature\FullStack\Project1\src\main\java\com\rev\Models\Manager.javaP P(Lµ
+²
+h
+^C:\Users\i_rya\Documents\Revature\FullStack\Project1\src\main\java\com\rev\Models\Manager.javaQ Q(&
+%5java.lang.String"__id*(*&
+com.rev.Models.Manager"
+
+lastName*
+5
+6*ø
+8h
+^C:\Users\i_rya\Documents\Revature\FullStack\Project1\src\main\java\com\rev\Models\Manager.javaP7 P(@¶
+³
+h
+^C:\Users\i_rya\Documents\Revature\FullStack\Project1\src\main\java\com\rev\Models\Manager.javaP7 P(@
+%4java.lang.String"__id*)*'
+com.rev.Models.Manager"
+	firstName¼¹
+h
+^C:\Users\i_rya\Documents\Revature\FullStack\Project1\src\main\java\com\rev\Models\Manager.javaP7 P(K	
+%3int"java.lang.String#hashCode()I*
+
+%4java.lang.String2
+hashCode()‹
+ˆ
+h
+^C:\Users\i_rya\Documents\Revature\FullStack\Project1\src\main\java\com\rev\Models\Manager.javaP7 P(K	
+%1int"__id*
+	
+%3int*
+7*€
+9h
+^C:\Users\i_rya\Documents\Revature\FullStack\Project1\src\main\java\com\rev\Models\Manager.javaP3 P(4‹
+ˆ
+h
+^C:\Users\i_rya\Documents\Revature\FullStack\Project1\src\main\java\com\rev\Models\Manager.javaP3 P(4	
+%1int"__id*
+	
+%2int*
+7*¯
+10h
+^C:\Users\i_rya\Documents\Revature\FullStack\Project1\src\main\java\com\rev\Models\Manager.javaN N(¶
+³
+h
+^C:\Users\i_rya\Documents\Revature\FullStack\Project1\src\main\java\com\rev\Models\Manager.javaP P('
+%0java.lang.String"__id*)*'
+com.rev.Models.Manager"
+	firstName*
+8
+9*á
+1h
+^C:\Users\i_rya\Documents\Revature\FullStack\Project1\src\main\java\com\rev\Models\Manager.javaS S(J"r
+h
+^C:\Users\i_rya\Documents\Revature\FullStack\Project1\src\main\java\com\rev\Models\Manager.javaT T(
+""B
+com.rev.Models.Manager

@@ -1,9 +1,11 @@
 package com.rev.DAO;
 
+import java.sql.CallableStatement;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Types;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
@@ -17,26 +19,25 @@ public class EmployeeOracle implements EmployeeDAO{
 	private static EmployeeOracle e;
 	
 	private EmployeeOracle() {}
+	
 	public static EmployeeDAO getDAO() {
 		if(e == null) {
 			e = new EmployeeOracle();
 		}
 		return e;
 	}
+	
 	public Optional<Employee> login(String username, String password) {
 
 		Connection c = ConnectionUtil.getConnection();
 		
-		//no connection
 		if(c == null) {
 			return Optional.empty();
 		}
 		
 		try {
 			String sql = "SELECT * FROM EMPLOYEE WHERE userName = ? AND e_password = ?";
-			//String sql1 = "SELECT * FROM EMPLOYEE";
 			PreparedStatement ps = c.prepareStatement(sql);
-			//setString index starts at 1
 			ps.setString(1, username);
 			ps.setString(2, password);
 			ResultSet rs = ps.executeQuery();
@@ -70,7 +71,6 @@ public class EmployeeOracle implements EmployeeDAO{
 		
 		Connection c = ConnectionUtil.getConnection();
 		
-		//no connection
 		if(c == null) {
 			return Optional.empty();
 		}
@@ -78,7 +78,6 @@ public class EmployeeOracle implements EmployeeDAO{
 		try {
 			String sql = "SELECT * FROM EMPLOYEE WHERE userName = ?";
 			PreparedStatement ps = c.prepareStatement(sql);
-			//setString index starts at 1
 			ps.setString(1, username);
 			ResultSet rs = ps.executeQuery();
 			
@@ -105,7 +104,6 @@ public class EmployeeOracle implements EmployeeDAO{
 	public Optional<List<Reimbursement>> viewPending(Employee e) {
 		Connection c = ConnectionUtil.getConnection();
 		
-		//no connection
 		if(c == null) {
 			return Optional.empty();
 		}
@@ -146,7 +144,6 @@ public class EmployeeOracle implements EmployeeDAO{
 	public Optional<List<Reimbursement>> viewPast(Employee e) {
 		Connection c = ConnectionUtil.getConnection();
 		
-		//no connection
 		if(c == null) {
 			return Optional.empty();
 		}
@@ -159,6 +156,7 @@ public class EmployeeOracle implements EmployeeDAO{
 			PreparedStatement ps = c.prepareStatement(sql);
 			ps.setInt(1, e.getEmployeeId());
 			ResultSet rs = ps.executeQuery();
+			
 			
 			boolean rsempty = true;
 			
@@ -187,21 +185,22 @@ public class EmployeeOracle implements EmployeeDAO{
 	public boolean submitReimbursement(Reimbursement r) {
 		Connection c = ConnectionUtil.getConnection();
 		
-		//no connection
 		if(c == null) {
 			return false;
 		}
 		
 		try {
-			String sql = "INSERT INTO REIMBURSEMENT VALUES(?,?,?,?)";
-			PreparedStatement ps = c.prepareStatement(sql);
-			ps.setInt(1, r.getReimbursementId());
-			ps.setDouble(2, r.getAmount());
-			ps.setInt(3, 1); //using one to represent that it is pending
-			ps.setInt(4, r.getEmployeeId());
-			int result = ps.executeUpdate();
+			String sql = "call addReim(?,?,?,?)";
+			CallableStatement cs = c.prepareCall(sql);
+			cs.setDouble(1, r.getAmount());
+			cs.setInt(2, 1); //using 1 to represent true
+			cs.setInt(3, r.getEmployeeId());
+			cs.registerOutParameter(4, Types.INTEGER);
+			boolean b = cs.execute();
 			
-			if(result == 0 || result == 1) {
+			int rID = cs.getInt(4);
+			
+			if(b) {
 				return true;
 			}
 			
@@ -214,10 +213,6 @@ public class EmployeeOracle implements EmployeeDAO{
 		catch(Exception e) {
 			System.out.println("Different error submitting reimbursement");
 		}
-		
 		return false;
 	}
-	
-	
-
 }
