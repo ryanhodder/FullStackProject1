@@ -1,7 +1,0 @@
-organization=ryanhodder-github
-projectKey=demoProject
-serverUrl=https://sonarcloud.io
-serverVersion=7.9.0.26601
-dashboardUrl=https://sonarcloud.io/dashboard?id=demoProject
-ceTaskId=AWuvCncTTPhXlxRtn3wO
-ceTaskUrl=https://sonarcloud.io/api/ce/task?id=AWuvCncTTPhXlxRtn3wO

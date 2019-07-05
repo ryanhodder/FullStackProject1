@@ -10,7 +10,6 @@ public interface ManagerDAO {
 	Optional<Manager> login(String username, String password);
 	boolean logout();
 	Optional<Employee> addUser(String firstName, String lastName, String username, String password);
-	//will fail if there is already a username the same
 	Optional<List<Reimbursement>> viewPending();
 	Optional<List<Reimbursement>> viewPast();
 	Optional<List<Reimbursement>> searchEmployee(int employeeID);

@@ -15,10 +15,19 @@
   </properties>
 
   <dependencies>
-  	<dependency>
+  
+<!--   	<dependency> -->
+<!-- 		<groupId>com.oracle</groupId> -->
+<!-- 		<artifactId>ojdbc7</artifactId> -->
+<!-- 		<version>12.1.0</version> -->
+<!-- 	</dependency> -->
+
+	<dependency>
 		<groupId>com.oracle</groupId>
-		<artifactId>ojdbc7</artifactId>
-		<version>12.1.0</version>
+		<artifactId>ojdbc</artifactId>
+		<version>8</version>
+		<scope>system</scope>
+		<systemPath>C:/Users/i_rya/Documents/ojdbc8.jar</systemPath>
 	</dependency>
   
     <dependency>
