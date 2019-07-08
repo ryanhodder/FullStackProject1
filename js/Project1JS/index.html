@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login</title>
+    <script src="JSFiles/ajax.js"></script>
+    <script src="JSFiles/login.js"></script>
+    <script src="JSFiles/eHome.js"></script>
+    <link rel="stylesheet" type="text/css" href="Project1CSS/main.css">
+</head>
+<body>
+    <div id="login" class="show">
+            <p>Username:<input type="text" id="username" name="username" required><br/>
+            Password:<input type="text" id="password" name="password" required></p>
+            <button onclick="login1()">Submit</button>
+    </div>
+
+    <div id="eHome" class="hide">
+        <p>Employee Home</p>
+        <p id="welcomeTag">Welcome Employee</p><br/>
+        <p>What would you like to do today?</p><br/>
+        <ul>
+            <li><button id="createReim" onclick="createReimbursement()">Create Reimbursement</button></li>
+            <li><button id="viewDetails" onclick="viewDetails()">View Details</button></li>
+            <li><button id="viewReimbursements" onclick="viewReimbursements()">View Reimbursements</button></li>
+            <li><button id="logout" onclick="logout('eHome')">Log out</button></li>
+        </ul>
+    </div>
+
+    <div id="reimForm" class="hide">
+        <p>Please fill out details of reimbursement</p>
+        <p>Amount: <input type="text" id="reimAmount"></p>
+        <button id="submitReim" onclick="submitReimbursement()">Submit reimbursement</button><br/>
+        <button id="eReimDone" onclick="backToHome('reimForm', 'eHome')">Back</button>
+    </div>
+
+    <div id="eDetails" class="hide">
+        <p id="idDetail"></p>
+        <p id="fnameDetail"></p>
+        <p id="lnameDetail"></p>
+        <p id="unameDetail"></p>
+        <button id="eDetailsDone" onclick="backToHome('eDetails', 'eHome')">Back</button>
+    </div>
+
+    <div id="reimList" class="hide">
+        <p>List of reimbursements</p>
+        <table border="1"  id="reimTable">
+            <thead>
+                <tr><th>ID</th><th>Amount</th><th>Pending</th></tr>
+            </thead>
+            <tbody >
+
+            </tbody>         
+        </table><br>
+        <button id="reimTableDone" onclick="backToHome('reimList', 'eHome')">Back</button>
+    </div>
+
+    <div id="mHome" class="hide">
+        <p>Manager Home</p>
+        <p id="mWelcomeTag">Welcome Manager</p>
+        <p>What would you like to do today</p>
+        <ul>
+            <li><button id="newEmployee" onclick="createNewEmployee()">Register new employee</button></li>
+            <li><button id="viewAllEmployee" onclick="viewAllEmployee()">View all employees</button></li>
+            <li><button id="viewReimbursements" onclick="">View all reimbursements</button></li>
+            <li><button id="logout" onclick="logout('mHome')">Log out</button></li>
+        </ul>
+    </div>
+
+    <div id="newEmployeeForm" class="hide">
+        <p>Please fill out details of new employee</p>
+        <p>First name: <input type="text" id="newF" required><br>
+            Last name: <input type="text" id="newL" required><br>
+            Username: <input type="text" id="newU" required><br>
+            Password: <input type="password" id="newP" required></p>
+            <button id="submitNewE" onclick="registerEmployee()">Submit</button><br>
+            <button id="eReimDone" onclick="backToHome('reimForm', 'mHome')">Back</button>
+    </div>
+
+    <div id="empList" class="hide">
+            <p>List of employees</p>
+            <table border="1"  id="empTable">
+                <thead>
+                    <tr><th>ID</th><th>Firstname</th><th>Lastname</th><th>Username</th></tr>
+                </thead>
+                <tbody >
+    
+                </tbody>         
+            </table><br>
+            <button id="empTableDone" onclick="backToHome('empList', 'mHome')">Back</button>
+    </div>
+</body>
+</html>
